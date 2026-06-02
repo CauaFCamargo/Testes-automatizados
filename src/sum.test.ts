@@ -1,10 +1,16 @@
 import { sum } from "./server"
 
 describe("sum", () => {
-  test("sum of 3 + 7 must be 10", () => {
+  let sumResult
+
+  beforeAll(() => {
+    sumResult = 10
+  })
+
+  it("should do sum of 3 + 7 must be 10", () => {
     const result = sum(3, 7)
 
-    expect(result).toBe(10)
+    expect(result).toBe(sumResult)
   })
 
   test("sum of 2 + 2 must be 4", () => {
